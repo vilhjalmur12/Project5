@@ -1,3 +1,31 @@
 INSERT INTO coffees_DID_DN_DS (DID, DN, DS)
 SELECT DID, DN, DS 
 FROM coffees;
+
+INSERT INTO coffees_CID_CN_CM (CID, CN, CM)
+SELECT CID, CN, CM
+FROM coffees;
+
+INSERT INTO rentals_HZ_HC(HZ, HC)
+SELECT HZ, HC
+FROM rentals;
+
+INSERT INTO rentals_PID_PN(PID, PN)
+SELECT PID, PN
+FROM rentals;
+
+INSERT INTO rentals_HID_HZ_HC (HID, HZ,HC)
+SELECT HID, HZ,HC
+FROM rentals;
+
+INSERT INTO projects_ID_MID_MN(ID, MID, MN)
+SELECT ID, MID, MN
+FROM projects;
+
+INSERT INTO Projects_PID_PN (PID, PN)
+SELECT PID, PN
+FROM projects;
+
+INSERT INTO Projects_SID_SN (SID, SN)
+SELECT SID, SN
+FROM projects;
