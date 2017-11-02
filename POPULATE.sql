@@ -1,0 +1,3 @@
+INSERT INTO coffees_DID_DN_DS (DID, DN, DS)
+SELECT DID, DN, DS 
+FROM coffees;
