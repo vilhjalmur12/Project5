@@ -1,0 +1,8 @@
+SELECT 'coffees: CN-->DS' AS FD, CASE WHEN COUNT(*)=0 THEN 'Gildir' ELSE 'Gildir ekki' END AS VALIDITY
+FROM(
+ SELECT CN
+  FROM coffees
+ GROUP BY CN
+ HAVING COUNT(DISTINCT DS) > 1
+) X;
+

@@ -1,0 +1,8 @@
+SELECT 'rentals: HC-->HS' AS FD, CASE WHEN COUNT(*)=0 THEN 'Gildir' ELSE 'Gildir ekki' END AS VALIDITY
+FROM(
+ SELECT HC
+  FROM rentals
+ GROUP BY HC
+ HAVING COUNT(DISTINCT HS) > 1
+) X;
+

@@ -1,0 +1,8 @@
+SELECT 'projects: PID-->SN' AS FD, CASE WHEN COUNT(*)=0 THEN 'Gildir' ELSE 'Gildir ekki' END AS VALIDITY
+FROM(
+ SELECT PID
+  FROM projects
+ GROUP BY PID
+ HAVING COUNT(DISTINCT SN) > 1
+) X;
+

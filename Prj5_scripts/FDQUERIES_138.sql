@@ -1,0 +1,8 @@
+SELECT 'rentals: PN-->PID' AS FD, CASE WHEN COUNT(*)=0 THEN 'Gildir' ELSE 'Gildir ekki' END AS VALIDITY
+FROM(
+ SELECT PN
+  FROM rentals
+ GROUP BY PN
+ HAVING COUNT(DISTINCT PID) > 1
+) X;
+
