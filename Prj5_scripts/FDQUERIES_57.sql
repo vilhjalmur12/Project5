@@ -1,0 +1,8 @@
+SELECT 'customers: CS-->CZ' AS FD, CASE WHEN COUNT(*)=0 THEN 'Gildir' ELSE 'Gildir ekki' END AS VALIDITY
+FROM(
+ SELECT CS
+  FROM customers
+ GROUP BY CS
+ HAVING COUNT(DISTINCT CZ) > 1
+) X;
+

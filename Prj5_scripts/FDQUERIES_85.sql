@@ -1,0 +1,8 @@
+SELECT 'projects: ID-->SID' AS FD, CASE WHEN COUNT(*)=0 THEN 'Gildir' ELSE 'Gildir ekki' END AS VALIDITY
+FROM(
+ SELECT ID
+  FROM projects
+ GROUP BY ID
+ HAVING COUNT(DISTINCT SID) > 1
+) X;
+

@@ -1,0 +1,8 @@
+SELECT 'coffees: CM-->HID' AS FD, CASE WHEN COUNT(*)=0 THEN 'Gildir' ELSE 'Gildir ekki' END AS VALIDITY
+FROM(
+ SELECT CM
+  FROM coffees
+ GROUP BY CM
+ HAVING COUNT(DISTINCT HID) > 1
+) X;
+
